@@ -1,0 +1,24 @@
+header:
+  version: 13
+
+machine: qemux86-64
+distro: poky
+target: core-image-full-cmdline
+defaults:
+  repos:
+    refspec: kirkstone
+
+# bblayers_conf_header:
+
+# local_conf_header:
+
+repos:
+  meta-tutorial:
+
+  poky:
+    url: "https://git.yoctoproject.org/git/poky"
+    path: layers/poky
+    layers:
+      meta:
+      meta-poky:
+      meta-yocto-bsp:
