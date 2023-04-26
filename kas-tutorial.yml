@@ -3,14 +3,16 @@ header:
 
 machine: qemux86-64
 distro: poky
-target: core-image-full-cmdline
+target: core-image-minimal
 defaults:
   repos:
     refspec: kirkstone
 
 # bblayers_conf_header:
 
-# local_conf_header:
+local_conf_header:
+  custom: |
+     EXTRA_IMAGE_FEATURES:append = "empty-root-password"
 
 repos:
   meta-tutorial:
